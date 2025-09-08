@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Button from "./Buttons/Button";
-import { IconCaretLeftFilled, IconCaretRightFilled } from "@tabler/icons-react";
+import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
 import { useState } from "react";
 
 type Type = "primary" | "secondary";
@@ -25,9 +25,9 @@ export default function Sidebar({
     <aside
       className={`sticky left-0 top-0 bg-primary-950 transition-all my-auto  ${
         open
-          ? `w-64 p-5  ${type === "primary" ? "h-screen " : "h-[96vh] "}`
+          ? `w-64 p-5  ${type === "primary" ? "h-screen " : "h-screen"}`
           : `w-12 p-2  ${
-              type === "primary" ? "ml-2 h-[98vh] rounded-md" : "h-[96vh]"
+              type === "primary" ? "ml-2 h-[98vh] rounded-md" : "h-[98vh]"
             }`
       } `}
     >
@@ -36,9 +36,9 @@ export default function Sidebar({
 
         <Button onClick={() => setOpen(!open)} className="rounded-full p-2">
           {open ? (
-            <IconCaretLeftFilled size={15} />
+            <IconChevronLeft size={15} />
           ) : (
-            <IconCaretRightFilled size={15} />
+            <IconChevronRight size={15} />
           )}
         </Button>
       </div>
